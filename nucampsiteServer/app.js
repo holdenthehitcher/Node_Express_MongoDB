@@ -23,7 +23,7 @@ const connect = mongoose.connect(url, {
 connect.then(() => console.log('Connected correctly to server'), 
     err => console.log(err)
 );
-
+ 
 var app = express();
 
 // view engine setup
