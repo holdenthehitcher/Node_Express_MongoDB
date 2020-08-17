@@ -6,7 +6,8 @@ const campsiteRouter = express.Router();
 
 campsiteRouter.use(bodyParser.json());
 
-campsiteRouter.route('/')
+campsiteRouter
+.route('/')
 .get((req, res, next) => {
     Campsite.find()
     .then(campsites => {
@@ -40,7 +41,8 @@ campsiteRouter.route('/')
     .catch(err => next(err));
 });
 
-campsiteRouter.route('/:campsiteId')
+campsiteRouter
+.route('/:campsiteId')
 .get((req, res, next) => {
     Campsite.findById(req.params.campsiteId)
     .then(campsite => {
